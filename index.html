@@ -1,0 +1,753 @@
+<!-- PRIORITY LEXUS VIRGINIA BEACH — L/CERTIFIED LANDING PAGE -->
+<!-- Upload assets/lcertified-hero.jpg and update --lc-hero-url below if the CMS changes the path. -->
+<style>
+  #lc-page {
+    --lc-black: #070708;
+    --lc-ink: #111214;
+    --lc-charcoal: #202226;
+    --lc-gray: #686d73;
+    --lc-line: #d9dce0;
+    --lc-mist: #f3f4f5;
+    --lc-white: #ffffff;
+    --lc-red: #e51d2a;
+    --lc-blue: #8199aa;
+    --lc-hero-url: url('assets/lcertified-hero.jpg');
+    color: var(--lc-ink);
+    background: var(--lc-white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    overflow: clip;
+    isolation: isolate;
+  }
+
+  #lc-page,
+  #lc-page * { box-sizing: border-box; }
+  #lc-page a { color: inherit; text-decoration: none; }
+  #lc-page button { font: inherit; }
+  #lc-page h1,
+  #lc-page h2,
+  #lc-page h3,
+  #lc-page p { margin: 0; }
+  #lc-page img { max-width: 100%; }
+
+  #lc-page .lc-shell {
+    width: min(1180px, calc(100% - 48px));
+    margin-inline: auto;
+  }
+
+  #lc-page .lc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--lc-red);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+  }
+
+  #lc-page .lc-eyebrow::before {
+    width: 32px;
+    height: 2px;
+    background: currentColor;
+    content: '';
+  }
+
+  #lc-page .lc-display {
+    max-width: 880px;
+    font-size: clamp(2.35rem, 5.7vw, 5.8rem);
+    font-weight: 300;
+    letter-spacing: -.055em;
+    line-height: .94;
+    text-wrap: balance;
+  }
+
+  #lc-page .lc-section-title {
+    margin-top: 18px;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 300;
+    letter-spacing: -.045em;
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  #lc-page .lc-section-copy {
+    max-width: 680px;
+    margin-top: 22px;
+    color: var(--lc-gray);
+    font-size: clamp(1rem, 1.5vw, 1.16rem);
+  }
+
+  #lc-page .lc-btn {
+    display: inline-flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 22px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    transition: transform .25s ease, background .25s ease, border-color .25s ease;
+  }
+
+  #lc-page .lc-btn:hover { transform: translateY(-2px); }
+  #lc-page .lc-btn:focus-visible,
+  #lc-page button:focus-visible,
+  #lc-page a:focus-visible {
+    outline: 3px solid #7cc7ff;
+    outline-offset: 4px;
+  }
+  #lc-page .lc-btn--red { color: var(--lc-white); background: var(--lc-red); }
+  #lc-page .lc-btn--ghost { color: var(--lc-white); border-color: rgba(255,255,255,.45); background: rgba(0,0,0,.18); }
+  #lc-page .lc-btn--dark { color: var(--lc-white); background: var(--lc-black); }
+  #lc-page .lc-btn svg { width: 18px; height: 18px; transition: transform .25s ease; }
+  #lc-page .lc-btn:hover svg { transform: translateX(4px); }
+
+  /* Local page navigation */
+  #lc-page .lc-subnav {
+    position: relative;
+    z-index: 20;
+    color: var(--lc-white);
+    background: var(--lc-black);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+
+  #lc-page .lc-subnav__inner {
+    display: flex;
+    min-height: 66px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  #lc-page .lc-mark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 9px;
+    white-space: nowrap;
+    font-weight: 300;
+    letter-spacing: -.03em;
+  }
+  #lc-page .lc-mark strong { font-size: 1.2rem; letter-spacing: -.05em; }
+  #lc-page .lc-mark small { color: #b8bdc3; font-size: .64rem; letter-spacing: .16em; }
+
+  #lc-page .lc-subnav__links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  #lc-page .lc-subnav__links a:not(.lc-btn) { color: #c8cbd0; transition: color .2s ease; }
+  #lc-page .lc-subnav__links a:not(.lc-btn):hover { color: var(--lc-white); }
+  #lc-page .lc-subnav__links .lc-btn { min-height: 38px; padding: 9px 16px; font-size: .68rem; }
+
+  /* Hero */
+  #lc-page .lc-hero {
+    position: relative;
+    min-height: min(820px, calc(100svh - 66px));
+    display: grid;
+    align-items: end;
+    color: var(--lc-white);
+    background-color: #101a24;
+    background-image: linear-gradient(90deg, rgba(3,7,11,.96) 0%, rgba(3,7,11,.78) 34%, rgba(3,7,11,.18) 70%, rgba(3,7,11,.18) 100%), var(--lc-hero-url);
+    background-position: center, center;
+    background-size: cover;
+  }
+
+  #lc-page .lc-hero::after {
+    position: absolute;
+    inset: auto 0 0;
+    height: 34%;
+    background: linear-gradient(transparent, rgba(4,5,7,.92));
+    content: '';
+    pointer-events: none;
+  }
+
+  #lc-page .lc-hero__content {
+    position: relative;
+    z-index: 2;
+    padding: clamp(90px, 14vw, 170px) 0 120px;
+  }
+
+  #lc-page .lc-hero .lc-eyebrow { color: #d6d9dd; }
+  #lc-page .lc-hero .lc-display { margin-top: 22px; }
+  #lc-page .lc-hero__lead {
+    max-width: 620px;
+    margin-top: 26px;
+    color: #d8dbe0;
+    font-size: clamp(1rem, 1.7vw, 1.22rem);
+  }
+  #lc-page .lc-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+  #lc-page .lc-award {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    color: #d8dbe0;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  #lc-page .lc-award span { width: 28px; height: 1px; background: var(--lc-red); }
+
+  #lc-page .lc-statbar {
+    position: relative;
+    z-index: 3;
+    margin-top: -72px;
+  }
+  #lc-page .lc-statbar__grid {
+    display: grid;
+    grid-template-columns: 1.2fr repeat(3, 1fr);
+    color: var(--lc-white);
+    background: rgba(15,16,18,.94);
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 26px 80px rgba(0,0,0,.24);
+    backdrop-filter: blur(18px);
+  }
+  #lc-page .lc-stat {
+    min-height: 142px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 26px 30px;
+    border-right: 1px solid rgba(255,255,255,.12);
+  }
+  #lc-page .lc-stat:last-child { border-right: 0; }
+  #lc-page .lc-stat strong { font-size: clamp(1.65rem, 3vw, 2.55rem); font-weight: 300; line-height: 1; }
+  #lc-page .lc-stat span { margin-top: 11px; color: #aeb3b9; font-size: .71rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  #lc-page .lc-stat--lead strong { font-size: 1rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  #lc-page .lc-stat--lead span { color: #d4d7db; font-size: .84rem; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-transform: none; }
+
+  /* Inspection */
+  #lc-page .lc-standard { padding: 150px 0 110px; }
+  #lc-page .lc-standard__intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: end; }
+  #lc-page .lc-161 {
+    color: var(--lc-ink);
+    font-size: clamp(7.2rem, 18vw, 14.5rem);
+    font-weight: 800;
+    letter-spacing: -.09em;
+    line-height: .72;
+  }
+  #lc-page .lc-161-label { margin-top: 28px; font-size: .76rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+
+  #lc-page .lc-inspection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin-top: 68px;
+    background: var(--lc-line);
+    border: 1px solid var(--lc-line);
+  }
+  #lc-page .lc-inspection-item {
+    min-height: 200px;
+    padding: 30px;
+    background: var(--lc-white);
+    transition: color .3s ease, background .3s ease, transform .3s ease;
+  }
+  #lc-page .lc-inspection-item:hover { position: relative; z-index: 2; color: var(--lc-white); background: var(--lc-ink); transform: translateY(-6px); }
+  #lc-page .lc-inspection-item__num { color: var(--lc-red); font-size: .72rem; font-weight: 800; letter-spacing: .15em; }
+  #lc-page .lc-inspection-item h3 { margin-top: 46px; font-size: 1.28rem; font-weight: 600; }
+  #lc-page .lc-inspection-item p { margin-top: 9px; color: var(--lc-gray); font-size: .9rem; }
+  #lc-page .lc-inspection-item:hover p { color: #c8cbd0; }
+
+  /* LexusCare interactive tabs */
+  #lc-page .lc-care { padding: 110px 0; color: var(--lc-white); background: var(--lc-black); }
+  #lc-page .lc-care__header { display: grid; grid-template-columns: 1fr .72fr; gap: 80px; align-items: end; }
+  #lc-page .lc-care .lc-section-copy { color: #aeb3b9; }
+  #lc-page .lc-care__value { padding-left: 34px; border-left: 2px solid var(--lc-red); }
+  #lc-page .lc-care__value strong { display: block; font-size: clamp(2.1rem, 4vw, 4.2rem); font-weight: 300; line-height: 1; }
+  #lc-page .lc-care__value span { display: block; margin-top: 14px; color: #aeb3b9; font-size: .86rem; }
+
+  #lc-page .lc-care__experience {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 40px;
+    margin-top: 64px;
+  }
+  #lc-page .lc-care__tabs { display: grid; align-content: start; gap: 8px; }
+  #lc-page .lc-care-tab {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 44px 1fr 20px;
+    align-items: center;
+    gap: 13px;
+    padding: 18px 16px;
+    color: #aeb3b9;
+    text-align: left;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.12);
+    cursor: pointer;
+    transition: color .25s ease, background .25s ease, border-color .25s ease;
+  }
+  #lc-page .lc-care-tab:hover { color: var(--lc-white); border-color: rgba(255,255,255,.35); }
+  #lc-page .lc-care-tab[aria-selected="true"] { color: var(--lc-white); background: var(--lc-charcoal); border-color: var(--lc-charcoal); }
+  #lc-page .lc-care-tab__num { color: var(--lc-red); font-size: .7rem; font-weight: 800; }
+  #lc-page .lc-care-tab__label { font-size: .77rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+  #lc-page .lc-care-tab__arrow { font-size: 1.15rem; }
+  #lc-page .lc-care-panel {
+    min-height: 460px;
+    display: grid;
+    align-content: end;
+    padding: clamp(34px, 6vw, 72px);
+    background:
+      radial-gradient(circle at 80% 10%, rgba(129,153,170,.24), transparent 38%),
+      linear-gradient(135deg, #272a2e, #141517 72%);
+    border: 1px solid rgba(255,255,255,.12);
+  }
+  #lc-page .lc-care-panel__metric { color: var(--lc-red); font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 800; letter-spacing: -.07em; line-height: .82; }
+  #lc-page .lc-care-panel h3 { max-width: 720px; margin-top: 24px; font-size: clamp(1.8rem, 3.2vw, 3.2rem); font-weight: 300; letter-spacing: -.035em; line-height: 1.05; }
+  #lc-page .lc-care-panel p { max-width: 720px; margin-top: 20px; color: #c5c9ce; font-size: 1.02rem; }
+
+  /* Priority difference */
+  #lc-page .lc-priority { padding: 110px 0; background: var(--lc-mist); }
+  #lc-page .lc-priority__grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 80px; align-items: center; }
+  #lc-page .lc-priority__card {
+    position: relative;
+    min-height: 520px;
+    display: grid;
+    align-content: end;
+    padding: clamp(34px, 6vw, 66px);
+    color: var(--lc-white);
+    background:
+      linear-gradient(160deg, rgba(5,6,8,.05), rgba(5,6,8,.92)),
+      radial-gradient(circle at 80% 20%, #4f6474, transparent 43%),
+      var(--lc-black);
+    overflow: hidden;
+  }
+  #lc-page .lc-priority__card::before {
+    position: absolute;
+    top: -90px;
+    right: -110px;
+    width: 330px;
+    height: 330px;
+    border: 1px solid rgba(255,255,255,.17);
+    border-radius: 50%;
+    box-shadow: 0 0 0 48px rgba(255,255,255,.025), 0 0 0 96px rgba(255,255,255,.02);
+    content: '';
+  }
+  #lc-page .lc-priority__card strong { font-size: clamp(4.5rem, 10vw, 8.5rem); letter-spacing: -.08em; line-height: .8; }
+  #lc-page .lc-priority__card h3 { margin-top: 28px; font-size: 1.5rem; font-weight: 400; }
+  #lc-page .lc-priority__card p { margin-top: 15px; color: #c6cbd0; }
+  #lc-page .lc-priority__list { display: grid; gap: 0; margin-top: 38px; border-top: 1px solid var(--lc-line); }
+  #lc-page .lc-priority__item { display: grid; grid-template-columns: 42px 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--lc-line); }
+  #lc-page .lc-priority__item span { color: var(--lc-red); font-size: .72rem; font-weight: 800; }
+  #lc-page .lc-priority__item strong { display: block; font-size: 1rem; }
+  #lc-page .lc-priority__item p { margin-top: 4px; color: var(--lc-gray); font-size: .9rem; }
+
+  /* FAQ */
+  #lc-page .lc-faq { padding: 110px 0; }
+  #lc-page .lc-faq__layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 90px; }
+  #lc-page .lc-faq__list { border-top: 1px solid var(--lc-line); }
+  #lc-page .lc-faq-item { border-bottom: 1px solid var(--lc-line); }
+  #lc-page .lc-faq-question {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 28px;
+    align-items: center;
+    gap: 22px;
+    padding: 24px 0;
+    color: var(--lc-ink);
+    text-align: left;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  #lc-page .lc-faq-question span:last-child { color: var(--lc-red); font-size: 1.6rem; font-weight: 300; transition: transform .25s ease; }
+  #lc-page .lc-faq-question[aria-expanded="true"] span:last-child { transform: rotate(45deg); }
+  #lc-page .lc-faq-answer { display: grid; grid-template-rows: 1fr; transition: grid-template-rows .32s ease; }
+  #lc-page .lc-faq-answer > div { overflow: hidden; }
+  #lc-page .lc-faq-answer p { padding: 0 52px 24px 0; color: var(--lc-gray); font-size: .95rem; }
+  #lc-page.lc-js .lc-faq-answer { grid-template-rows: 0fr; }
+  #lc-page.lc-js .lc-faq-question[aria-expanded="true"] + .lc-faq-answer { grid-template-rows: 1fr; }
+
+  /* Final CTA + legal */
+  #lc-page .lc-cta { position: relative; padding: 110px 0; color: var(--lc-white); background: var(--lc-black); overflow: hidden; }
+  #lc-page .lc-cta::before {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 78% 50%, rgba(129,153,170,.26), transparent 30%);
+    content: '';
+  }
+  #lc-page .lc-cta__inner { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 50px; align-items: end; }
+  #lc-page .lc-cta h2 { max-width: 760px; font-size: clamp(2.4rem, 5.4vw, 5.4rem); font-weight: 300; letter-spacing: -.055em; line-height: .95; }
+  #lc-page .lc-cta p { max-width: 680px; margin-top: 22px; color: #aeb3b9; }
+  #lc-page .lc-cta__actions { display: grid; gap: 11px; min-width: 250px; }
+
+  #lc-page .lc-legal { padding: 54px 0 72px; color: #777c82; background: #eeeeef; font-size: .72rem; line-height: 1.55; }
+  #lc-page .lc-legal h2 { color: var(--lc-ink); font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; }
+  #lc-page .lc-legal__columns { columns: 2; column-gap: 44px; margin-top: 22px; }
+  #lc-page .lc-legal p { margin: 0 0 12px; break-inside: avoid; }
+  #lc-page .lc-legal address { margin-top: 26px; color: var(--lc-ink); font-style: normal; font-weight: 700; }
+
+  /* Scroll-reveal motion */
+  #lc-page.lc-js .lc-reveal { opacity: 0; transform: translateY(30px); transition: opacity .75s ease, transform .75s ease; }
+  #lc-page.lc-js .lc-reveal.is-visible { opacity: 1; transform: none; }
+
+  @media (max-width: 900px) {
+    #lc-page .lc-subnav__links a:not(.lc-btn) { display: none; }
+    #lc-page .lc-hero { min-height: 760px; background-image: linear-gradient(180deg, rgba(3,7,11,.28), rgba(3,7,11,.93) 76%), var(--lc-hero-url); background-position: center, 62% center; }
+    #lc-page .lc-hero__content { padding-bottom: 116px; }
+    #lc-page .lc-statbar__grid { grid-template-columns: repeat(3, 1fr); }
+    #lc-page .lc-stat--lead { grid-column: 1 / -1; min-height: auto; }
+    #lc-page .lc-standard__intro,
+    #lc-page .lc-care__header,
+    #lc-page .lc-priority__grid,
+    #lc-page .lc-faq__layout { grid-template-columns: 1fr; gap: 46px; }
+    #lc-page .lc-inspection-grid { grid-template-columns: repeat(2, 1fr); }
+    #lc-page .lc-care__experience { grid-template-columns: 1fr; }
+    #lc-page .lc-care__tabs { grid-template-columns: repeat(3, 1fr); }
+    #lc-page .lc-care-tab { grid-template-columns: 32px 1fr; }
+    #lc-page .lc-care-tab__arrow { display: none; }
+    #lc-page .lc-faq__layout { gap: 38px; }
+    #lc-page .lc-cta__inner { grid-template-columns: 1fr; }
+    #lc-page .lc-cta__actions { grid-template-columns: repeat(2, minmax(0, 1fr)); min-width: 0; }
+  }
+
+  @media (max-width: 640px) {
+    #lc-page .lc-shell { width: min(100% - 30px, 1180px); }
+    #lc-page .lc-subnav__inner { min-height: 58px; }
+    #lc-page .lc-mark strong { font-size: 1.02rem; }
+    #lc-page .lc-mark small { display: none; }
+    #lc-page .lc-subnav__links .lc-btn { min-height: 36px; padding: 8px 13px; }
+    #lc-page .lc-hero { min-height: 720px; }
+    #lc-page .lc-hero__content { padding-top: 170px; }
+    #lc-page .lc-hero__actions { display: grid; }
+    #lc-page .lc-hero__actions .lc-btn { width: 100%; }
+    #lc-page .lc-statbar { margin-top: -50px; }
+    #lc-page .lc-statbar__grid { grid-template-columns: 1fr; }
+    #lc-page .lc-stat { min-height: auto; padding: 20px 22px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+    #lc-page .lc-stat:last-child { border-bottom: 0; }
+    #lc-page .lc-standard,
+    #lc-page .lc-care,
+    #lc-page .lc-priority,
+    #lc-page .lc-faq,
+    #lc-page .lc-cta { padding-block: 82px; }
+    #lc-page .lc-standard__intro { gap: 35px; }
+    #lc-page .lc-161 { font-size: 8.4rem; }
+    #lc-page .lc-inspection-grid { grid-template-columns: 1fr; margin-top: 48px; }
+    #lc-page .lc-inspection-item { min-height: 164px; }
+    #lc-page .lc-inspection-item h3 { margin-top: 30px; }
+    #lc-page .lc-care__tabs { grid-template-columns: 1fr; }
+    #lc-page .lc-care-panel { min-height: 420px; padding: 30px 24px; }
+    #lc-page .lc-priority__card { min-height: 430px; }
+    #lc-page .lc-cta__actions { grid-template-columns: 1fr; }
+    #lc-page .lc-legal__columns { columns: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #lc-page *, #lc-page *::before, #lc-page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    #lc-page .lc-reveal { opacity: 1; transform: none; }
+  }
+</style>
+
+<main id="lc-page">
+  <!-- Local navigation for this landing page -->
+  <nav class="lc-subnav" aria-label="L/Certified page navigation">
+    <div class="lc-shell lc-subnav__inner">
+      <a class="lc-mark" href="#lc-top" aria-label="L/Certified by Lexus">
+        <strong>L/CERTIFIED</strong><small>BY LEXUS</small>
+      </a>
+      <div class="lc-subnav__links">
+        <a href="#lc-standard">The Standard</a>
+        <a href="#lc-care">LexusCare</a>
+        <a href="#lc-questions">Questions</a>
+        <a class="lc-btn lc-btn--red" href="https://www.prioritylexusvirginiabeach.com/search/certified-pre-owned-lexus-virginia-beach-va/?cy=23452&amp;mk=33&amp;tp=certified&amp;tp=pre_owned">View Inventory</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cinematic hero -->
+  <section class="lc-hero" id="lc-top" aria-labelledby="lc-hero-title">
+    <div class="lc-shell lc-hero__content">
+      <div class="lc-eyebrow">Priority Lexus Virginia Beach</div>
+      <h1 class="lc-display" id="lc-hero-title">A new era of luxury, certified.</h1>
+      <p class="lc-hero__lead">Every L/Certified Lexus is renewed to Lexus standard, backed by LexusCare, and ready for what comes next.</p>
+      <div class="lc-hero__actions">
+        <a class="lc-btn lc-btn--red" href="https://www.prioritylexusvirginiabeach.com/search/certified-pre-owned-lexus-virginia-beach-va/?cy=23452&amp;mk=33&amp;tp=certified&amp;tp=pre_owned">
+          Browse L/Certified
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="lc-btn lc-btn--ghost" href="tel:17574863500">Call 757-486-3500</a>
+      </div>
+      <div class="lc-award"><span></span>U.S. News &amp; World Report — Best CPO Program, 2026</div>
+    </div>
+  </section>
+
+  <!-- Key program metrics -->
+  <div class="lc-statbar">
+    <div class="lc-shell lc-statbar__grid lc-reveal">
+      <div class="lc-stat lc-stat--lead"><strong>Luxury with proof.</strong><span>Only vehicles that meet Lexus standards earn the badge.</span></div>
+      <div class="lc-stat"><strong data-lc-count="161">161</strong><span>Point inspection</span></div>
+      <div class="lc-stat"><strong>6 years</strong><span>Potential combined coverage</span></div>
+      <div class="lc-stat"><strong>$0</strong><span>Covered-repair deductible</span></div>
+    </div>
+  </div>
+
+  <!-- 161-point inspection -->
+  <section class="lc-standard" id="lc-standard" aria-labelledby="lc-standard-title">
+    <div class="lc-shell">
+      <div class="lc-standard__intro">
+        <div class="lc-reveal">
+          <div class="lc-161" aria-hidden="true">161</div>
+          <div class="lc-161-label">Points. One uncompromising standard.</div>
+        </div>
+        <div class="lc-reveal">
+          <div class="lc-eyebrow">The Standard</div>
+          <h2 class="lc-section-title" id="lc-standard-title">Certified in 161 ways.</h2>
+          <p class="lc-section-copy">An L/Certified Lexus isn’t simply inspected — it’s given a Total View by Lexus-trained technicians, then renewed to Lexus standard.</p>
+        </div>
+      </div>
+
+      <div class="lc-inspection-grid lc-reveal">
+        <article class="lc-inspection-item"><span class="lc-inspection-item__num">01</span><h3>Engine &amp; powertrain</h3><p>Core mechanical systems are evaluated for the response and refinement expected from Lexus.</p></article>
+        <article class="lc-inspection-item"><span class="lc-inspection-item__num">02</span><h3>Exterior &amp; finish</h3><p>Body panels, paint, glass, lighting and exterior details receive a comprehensive review.</p></article>
+        <article class="lc-inspection-item"><span class="lc-inspection-item__num">03</span><h3>Interior &amp; comfort</h3><p>Seating, trim, climate features and cabin appointments are checked for quality and function.</p></article>
+        <article class="lc-inspection-item"><span class="lc-inspection-item__num">04</span><h3>Electronics &amp; multimedia</h3><p>Vehicle technology, controls, displays and connectivity systems are tested.</p></article>
+        <article class="lc-inspection-item"><span class="lc-inspection-item__num">05</span><h3>Safety systems</h3><p>Key safety equipment and driver-support systems are examined by Lexus-trained technicians.</p></article>
+        <article class="lc-inspection-item"><span class="lc-inspection-item__num">06</span><h3>Undercarriage &amp; road test</h3><p>The vehicle is inspected underneath and driven to confirm on-road performance.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive LexusCare benefits -->
+  <section class="lc-care" id="lc-care" aria-labelledby="lc-care-title">
+    <div class="lc-shell">
+      <div class="lc-care__header">
+        <div class="lc-reveal">
+          <div class="lc-eyebrow">LexusCare</div>
+          <h2 class="lc-section-title" id="lc-care-title">Backed like a new Lexus.</h2>
+          <p class="lc-section-copy">Coverage and courtesies designed to make ownership effortless from the day you drive off.</p>
+        </div>
+        <div class="lc-care__value lc-reveal"><strong>$2,000–$2,500</strong><span>Estimated added value over a comparable non-certified used vehicle.</span></div>
+      </div>
+
+      <div class="lc-care__experience lc-reveal">
+        <div class="lc-care__tabs" role="tablist" aria-label="LexusCare benefits">
+          <button class="lc-care-tab" type="button" role="tab" aria-selected="true" data-metric="6" data-title="Up to six years, unlimited miles" data-copy="The L/Certified Limited Warranty adds two years of unlimited-mileage coverage with a $0 deductible — up to six years of bumper-to-bumper protection when combined with the factory Basic Warranty."><span class="lc-care-tab__num">01</span><span class="lc-care-tab__label">Limited warranty</span><span class="lc-care-tab__arrow">→</span></button>
+          <button class="lc-care-tab" type="button" role="tab" aria-selected="false" data-metric="4" data-title="The next four scheduled services" data-copy="Complimentary maintenance covers the next four manufacturer-recommended services for two years or 20,000 miles, whichever comes first."><span class="lc-care-tab__num">02</span><span class="lc-care-tab__label">Maintenance</span><span class="lc-care-tab__arrow">→</span></button>
+          <button class="lc-care-tab" type="button" role="tab" aria-selected="false" data-metric="24/7" data-title="Roadside help whenever you need it" data-copy="Roadside assistance is included throughout the warranty period for flat tires, dead batteries, lockouts, fuel delivery and towing to the nearest Lexus dealer."><span class="lc-care-tab__num">03</span><span class="lc-care-tab__label">Roadside</span><span class="lc-care-tab__arrow">→</span></button>
+          <button class="lc-care-tab" type="button" role="tab" aria-selected="false" data-metric="$0" data-title="A Lexus loaner during covered repairs" data-copy="Keep your day moving with a complimentary Lexus loaner while your vehicle is in for a covered warranty repair."><span class="lc-care-tab__num">04</span><span class="lc-care-tab__label">Loaner vehicle</span><span class="lc-care-tab__arrow">→</span></button>
+          <button class="lc-care-tab" type="button" role="tab" aria-selected="false" data-metric="$200" data-title="Trip-interruption protection" data-copy="If a covered repair is needed while you’re traveling, trip-interruption assistance includes lodging reimbursement up to $200 per night, plus meals and a rental vehicle."><span class="lc-care-tab__num">05</span><span class="lc-care-tab__label">Trip interruption</span><span class="lc-care-tab__arrow">→</span></button>
+          <button class="lc-care-tab" type="button" role="tab" aria-selected="false" data-metric="2" data-title="Connected from the first drive" data-copy="Every L/Certified Lexus also includes trial subscriptions to SiriusXM and Lexus Connected Services. Program availability and terms may vary."><span class="lc-care-tab__num">06</span><span class="lc-care-tab__label">Trial services</span><span class="lc-care-tab__arrow">→</span></button>
+        </div>
+
+        <div class="lc-care-panel" role="tabpanel" aria-live="polite">
+          <div class="lc-care-panel__metric">6</div>
+          <h3>Up to six years, unlimited miles</h3>
+          <p>The L/Certified Limited Warranty adds two years of unlimited-mileage coverage with a $0 deductible — up to six years of bumper-to-bumper protection when combined with the factory Basic Warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Priority difference -->
+  <section class="lc-priority" aria-labelledby="lc-priority-title">
+    <div class="lc-shell lc-priority__grid">
+      <div class="lc-priority__card lc-reveal">
+        <strong>29</strong>
+        <h3>Service bays at Priority Lexus Virginia Beach</h3>
+        <p>Plus a second service building and the hospitality our owners already know.</p>
+      </div>
+      <div class="lc-reveal">
+        <div class="lc-eyebrow">The Priority Difference</div>
+        <h2 class="lc-section-title" id="lc-priority-title">Luxury ownership, backed locally.</h2>
+        <p class="lc-section-copy">Buy L/Certified at Priority and add the long-term value of Priorities for Life.</p>
+        <div class="lc-priority__list">
+          <div class="lc-priority__item"><span>01</span><div><strong>Oil &amp; filter changes for life</strong><p>Included for eligible vehicles for as long as you own them.</p></div></div>
+          <div class="lc-priority__item"><span>02</span><div><strong>Virginia state inspections for life</strong><p>Handled where you purchased your vehicle.</p></div></div>
+          <div class="lc-priority__item"><span>03</span><div><strong>Lexus-trained support</strong><p>Factory knowledge, premium service and a team here in Virginia Beach.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="lc-faq" id="lc-questions" aria-labelledby="lc-faq-title">
+    <div class="lc-shell lc-faq__layout">
+      <div class="lc-reveal">
+        <div class="lc-eyebrow">L/Certified, Answered</div>
+        <h2 class="lc-section-title" id="lc-faq-title">The essentials, without the fine-print fog.</h2>
+        <p class="lc-section-copy">Still deciding? Our Lexus team can walk you through coverage, eligibility and available vehicles.</p>
+      </div>
+      <div class="lc-faq__list lc-reveal">
+        <div class="lc-faq-item">
+          <button class="lc-faq-question" type="button" aria-expanded="true"><span>What is L/Certified by Lexus?</span><span>+</span></button>
+          <div class="lc-faq-answer"><div><p>L/Certified is Lexus’s certified pre-owned program. Each vehicle is a select low-mileage pre-owned Lexus that passes a comprehensive 161-point inspection by Lexus-trained technicians and is backed by LexusCare. U.S. News &amp; World Report named it the Best CPO Program of 2026 — the ninth year in a row.</p></div></div>
+        </div>
+        <div class="lc-faq-item">
+          <button class="lc-faq-question" type="button" aria-expanded="false"><span>What does the 161-point inspection cover?</span><span>+</span></button>
+          <div class="lc-faq-answer"><div><p>Lexus-trained technicians inspect the engine and powertrain, exterior and finish, interior, electronics and multimedia, safety systems and undercarriage, and complete a road test. Only vehicles that meet Lexus standards earn L/Certified status.</p></div></div>
+        </div>
+        <div class="lc-faq-item">
+          <button class="lc-faq-question" type="button" aria-expanded="false"><span>What warranty comes with an L/Certified Lexus?</span><span>+</span></button>
+          <div class="lc-faq-answer"><div><p>The L/Certified Limited Warranty provides at least two years of unlimited-mileage coverage with a $0 deductible. It begins at the later of your purchase date or the end of the four-year/50,000-mile factory Basic Warranty, allowing for up to six years of combined coverage. See the dealer for complete terms.</p></div></div>
+        </div>
+        <div class="lc-faq-item">
+          <button class="lc-faq-question" type="button" aria-expanded="false"><span>How is it different from a regular used car?</span><span>+</span></button>
+          <div class="lc-faq-answer"><div><p>A regular used car is sold as-is. L/Certified adds the 161-point inspection, factory-backed warranty coverage, complimentary maintenance, roadside assistance, trip-interruption protection and additional ownership benefits.</p></div></div>
+        </div>
+        <div class="lc-faq-item">
+          <button class="lc-faq-question" type="button" aria-expanded="false"><span>Can I finance an L/Certified Lexus?</span><span>+</span></button>
+          <div class="lc-faq-answer"><div><p>Yes. Special financing may be available through Lexus Financial Services on approved credit. Contact Priority Lexus Virginia Beach for current rates and terms.</p></div></div>
+        </div>
+        <div class="lc-faq-item">
+          <button class="lc-faq-question" type="button" aria-expanded="false"><span>Where can I see L/Certified inventory near me?</span><span>+</span></button>
+          <div class="lc-faq-answer"><div><p>Priority Lexus Virginia Beach serves Virginia Beach, Chesapeake, Norfolk, Portsmouth and greater Hampton Roads. Browse current inventory online or contact our team to reserve an arriving vehicle.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conversion CTA -->
+  <section class="lc-cta" aria-labelledby="lc-cta-title">
+    <div class="lc-shell lc-cta__inner">
+      <div class="lc-reveal">
+        <div class="lc-eyebrow">Available Now</div>
+        <h2 id="lc-cta-title">Find the Lexus that already feels like yours.</h2>
+        <p>Certified vehicles arrive weekly and the best ones move fast. Browse what’s available now or tell our team which model you have in mind.</p>
+      </div>
+      <div class="lc-cta__actions lc-reveal">
+        <a class="lc-btn lc-btn--red" href="https://www.prioritylexusvirginiabeach.com/search/certified-pre-owned-lexus-virginia-beach-va/?cy=23452&amp;mk=33&amp;tp=certified&amp;tp=pre_owned">View Inventory</a>
+        <a class="lc-btn lc-btn--ghost" href="tel:17574863500">Call 757-486-3500</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete program terms and dealership disclaimers -->
+  <section class="lc-legal" aria-labelledby="lc-legal-title">
+    <div class="lc-shell">
+      <h2 id="lc-legal-title">Program terms &amp; disclaimers</h2>
+      <div class="lc-legal__columns">
+        <p>L/Certified by Lexus vehicles are select pre-owned Lexus models, generally six model years or newer, that pass a comprehensive 161-point inspection performed by Lexus-trained technicians; L/Certified eligibility is based on a vehicle’s age and mileage at the time of certification.</p>
+        <p>Each L/Certified vehicle includes LexusCare: the L/Certified Limited Warranty provides a minimum of two years/unlimited mileage with a $0 deductible, valid after the expiration of the four-year/50,000-mile new-vehicle Basic Warranty or two years from the L/Certified purchase or lease date, whichever occurs later; combined with the new-vehicle Basic Warranty, this can provide up to six years of coverage.</p>
+        <p>LexusCare also includes complimentary maintenance covering the next four manufacturer-recommended services for two years or 20,000 miles, whichever comes first; 24/7 roadside assistance during the warranty period; trip-interruption assistance (lodging reimbursement up to $200 per night, plus meals and a rental vehicle); a complimentary loaner during covered warranty repairs; and trial subscriptions to SiriusXM and Lexus Connected Services. Covered repairs are made with no deductible.</p>
+        <p>The L/Certified Limited Warranty does not cover routine or scheduled maintenance, normal wear items (including brake pads, wiper blades and tires), or damage resulting from accident, misuse, alteration or lack of required maintenance; it is non-transferable and applies to the original L/Certified purchaser, and any remaining new-vehicle Basic Warranty transfers normally. The L/Certified Limited Warranty is governed by the terms of the L/Certified Limited Warranty Supplement provided with the vehicle.</p>
+        <p>Estimated $2,000–$2,500 added value reflects the combined benefits compared with a comparable non-certified used vehicle and varies by vehicle. Special financing on L/Certified vehicles is available through Lexus Financial Services with approved credit; not all buyers will qualify. Based on the combination of benefits offered, U.S. News &amp; World Report named L/Certified by Lexus the “Best CPO Program” of 2026.</p>
+        <p>All vehicles are subject to prior sale. Advertised prices exclude tax, title, license and a $999 dealer processing fee. Financing is available with approved credit for well-qualified buyers; actual rates and terms may vary based on credit history. Offers cannot be combined with any other advertised promotions. While every reasonable effort is made to ensure the accuracy of this information, we are not responsible for any typographical errors, omissions or inaccuracies contained within this media.</p>
+        <p>Vehicle photos may be for illustration purposes only. Please verify any information in question directly with Priority.</p>
+        <p>Priorities for Life estimated savings value based on 10 years and 150,000 miles. The Engine Guarantee applies only to select new vehicles; Towing for Life is limited by distance from the dealership; Oil &amp; Filter Changes for Life exclude vehicles with diesel engines; State Inspections are available only in Virginia; and the Installed Parts &amp; Service Guarantee for Life includes additional limitations.</p>
+        <p>Benefits are non-transferable, apply only to the original owner, and all work must be done at the dealership where the vehicle was purchased.</p>
+      </div>
+      <address>Priority Lexus Virginia Beach · 3909 Virginia Beach Blvd, Virginia Beach, VA 23452 · (757) 486-3500</address>
+    </div>
+  </section>
+</main>
+
+<script>
+(() => {
+  const page = document.getElementById('lc-page');
+  if (!page || page.dataset.lcReady === 'true') return;
+  page.dataset.lcReady = 'true';
+  page.classList.add('lc-js');
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Smooth, offset-aware anchor navigation within the landing page.
+  page.querySelectorAll('a[href^="#lc-"]').forEach(link => {
+    link.addEventListener('click', event => {
+      const target = page.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
+
+  // Reveal content as it enters the viewport.
+  const reveals = page.querySelectorAll('.lc-reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+    reveals.forEach(el => revealObserver.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Count the inspection total once, when the metric enters view.
+  const counter = page.querySelector('[data-lc-count]');
+  if (counter && !reduceMotion && 'IntersectionObserver' in window) {
+    const target = Number(counter.dataset.lcCount);
+    const countObserver = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      const start = performance.now();
+      const duration = 1150;
+      const tick = now => {
+        const progress = Math.min((now - start) / duration, 1);
+        counter.textContent = Math.round(target * (1 - Math.pow(1 - progress, 3)));
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      countObserver.disconnect();
+    }, { threshold: .6 });
+    counter.textContent = '0';
+    countObserver.observe(counter);
+  }
+
+  // LexusCare benefit switcher.
+  const careTabs = [...page.querySelectorAll('.lc-care-tab')];
+  const carePanel = page.querySelector('.lc-care-panel');
+  const careMetric = carePanel?.querySelector('.lc-care-panel__metric');
+  const careTitle = carePanel?.querySelector('h3');
+  const careCopy = carePanel?.querySelector('p');
+  careTabs.forEach((tab, index) => {
+    tab.setAttribute('tabindex', index === 0 ? '0' : '-1');
+    tab.addEventListener('click', () => {
+      careTabs.forEach(item => { item.setAttribute('aria-selected', 'false'); item.setAttribute('tabindex', '-1'); });
+      tab.setAttribute('aria-selected', 'true');
+      tab.setAttribute('tabindex', '0');
+      if (careMetric) careMetric.textContent = tab.dataset.metric;
+      if (careTitle) careTitle.textContent = tab.dataset.title;
+      if (careCopy) careCopy.textContent = tab.dataset.copy;
+    });
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowDown', 'ArrowUp', 'ArrowRight', 'ArrowLeft'].includes(event.key)) return;
+      event.preventDefault();
+      const direction = ['ArrowDown', 'ArrowRight'].includes(event.key) ? 1 : -1;
+      const next = careTabs[(index + direction + careTabs.length) % careTabs.length];
+      next.focus();
+      next.click();
+    });
+  });
+
+  // Accessible FAQ accordions; allow one answer to stay open.
+  page.querySelectorAll('.lc-faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const wasOpen = question.getAttribute('aria-expanded') === 'true';
+      page.querySelectorAll('.lc-faq-question').forEach(item => item.setAttribute('aria-expanded', 'false'));
+      question.setAttribute('aria-expanded', wasOpen ? 'false' : 'true');
+    });
+  });
+
+  // Gentle desktop-only hero parallax.
+  const hero = page.querySelector('.lc-hero');
+  if (hero && !reduceMotion && window.matchMedia('(min-width: 901px)').matches) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const rect = hero.getBoundingClientRect();
+        if (rect.bottom > 0) hero.style.backgroundPosition = `center, center ${Math.max(-24, window.scrollY * .08)}px`;
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+})();
+</script>
