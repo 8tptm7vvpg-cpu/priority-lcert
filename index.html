@@ -1,5 +1,5 @@
-<!-- PRIORITY LEXUS VIRGINIA BEACH — L/CERTIFIED LANDING PAGE -->
-<!-- Upload assets/lcertified-hero.jpg and update --lc-hero-url below if the CMS changes the path. -->
+<!-- PRIORITY LEXUS VIRGINIA BEACH — L/CERTIFIED LANDING PAGE — VERSION 2 -->
+<!-- Keep lcertified-hero.jpg beside index.html or update --lc-hero-url below. -->
 <style>
   #lc-page {
     --lc-black: #070708;
@@ -11,7 +11,9 @@
     --lc-white: #ffffff;
     --lc-red: #e51d2a;
     --lc-blue: #8199aa;
-    --lc-hero-url: url('assets/lcertified-hero.jpg');
+    --lc-hero-url: url('lcertified-hero.jpg');
+    width: 100%;
+    max-width: 100%;
     color: var(--lc-ink);
     background: var(--lc-white);
     font-family: Arial, Helvetica, sans-serif;
@@ -397,8 +399,13 @@
 
   @media (max-width: 900px) {
     #lc-page .lc-subnav__links a:not(.lc-btn) { display: none; }
-    #lc-page .lc-hero { min-height: 760px; background-image: linear-gradient(180deg, rgba(3,7,11,.28), rgba(3,7,11,.93) 76%), var(--lc-hero-url); background-position: center, 62% center; }
-    #lc-page .lc-hero__content { padding-bottom: 116px; }
+    #lc-page .lc-hero {
+      min-height: 700px;
+      align-items: end;
+      background-image: linear-gradient(180deg, rgba(3,7,11,.08) 0%, rgba(3,7,11,.24) 34%, rgba(3,7,11,.96) 78%), var(--lc-hero-url);
+      background-position: center, 66% center;
+    }
+    #lc-page .lc-hero__content { padding: 300px 0 104px; }
     #lc-page .lc-statbar__grid { grid-template-columns: repeat(3, 1fr); }
     #lc-page .lc-stat--lead { grid-column: 1 / -1; min-height: auto; }
     #lc-page .lc-standard__intro,
@@ -416,34 +423,82 @@
   }
 
   @media (max-width: 640px) {
-    #lc-page .lc-shell { width: min(100% - 30px, 1180px); }
+    #lc-page .lc-shell { width: min(100% - 32px, 1180px); }
+    #lc-page .lc-display { font-size: clamp(2.65rem, 13vw, 3.55rem); line-height: .96; }
+    #lc-page .lc-section-title { font-size: clamp(2.15rem, 10vw, 3rem); line-height: 1.02; }
+    #lc-page .lc-section-copy { margin-top: 17px; font-size: 1rem; }
     #lc-page .lc-subnav__inner { min-height: 58px; }
     #lc-page .lc-mark strong { font-size: 1.02rem; }
     #lc-page .lc-mark small { display: none; }
-    #lc-page .lc-subnav__links .lc-btn { min-height: 36px; padding: 8px 13px; }
-    #lc-page .lc-hero { min-height: 720px; }
-    #lc-page .lc-hero__content { padding-top: 170px; }
+    #lc-page .lc-subnav__links .lc-btn { min-height: 40px; padding: 9px 13px; font-size: .62rem; }
+    #lc-page .lc-hero {
+      min-height: 660px;
+      background-image: linear-gradient(180deg, rgba(3,7,11,.06) 0%, rgba(3,7,11,.18) 31%, rgba(3,7,11,.98) 74%), var(--lc-hero-url);
+      background-position: center, 68% center;
+    }
+    #lc-page .lc-hero__content { padding: 270px 0 72px; }
+    #lc-page .lc-hero__lead { margin-top: 20px; font-size: 1rem; line-height: 1.55; }
+    #lc-page .lc-hero__actions { margin-top: 26px; }
+    #lc-page .lc-award { align-items: flex-start; margin-top: 23px; font-size: .65rem; line-height: 1.5; }
     #lc-page .lc-hero__actions { display: grid; }
     #lc-page .lc-hero__actions .lc-btn { width: 100%; }
-    #lc-page .lc-statbar { margin-top: -50px; }
-    #lc-page .lc-statbar__grid { grid-template-columns: 1fr; }
-    #lc-page .lc-stat { min-height: auto; padding: 20px 22px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
-    #lc-page .lc-stat:last-child { border-bottom: 0; }
+    #lc-page .lc-statbar { margin-top: 0; background: var(--lc-black); }
+    #lc-page .lc-statbar__grid { width: 100%; grid-template-columns: repeat(3, 1fr); border-inline: 0; box-shadow: none; }
+    #lc-page .lc-stat--lead { grid-column: 1 / -1; text-align: left; }
+    #lc-page .lc-stat { min-height: 108px; align-items: center; padding: 18px 8px; text-align: center; border-right: 1px solid rgba(255,255,255,.12); border-bottom: 0; }
+    #lc-page .lc-stat strong { font-size: 1.35rem; }
+    #lc-page .lc-stat span { margin-top: 8px; font-size: .58rem; line-height: 1.4; }
+    #lc-page .lc-stat--lead { min-height: auto; align-items: flex-start; padding: 21px 16px; border-bottom: 1px solid rgba(255,255,255,.12); }
+    #lc-page .lc-stat--lead strong { font-size: .78rem; }
+    #lc-page .lc-stat--lead span { font-size: .78rem; text-align: left; }
+    #lc-page .lc-stat:last-child { border-right: 0; }
     #lc-page .lc-standard,
     #lc-page .lc-care,
     #lc-page .lc-priority,
     #lc-page .lc-faq,
-    #lc-page .lc-cta { padding-block: 82px; }
+    #lc-page .lc-cta { padding-block: 72px; }
     #lc-page .lc-standard__intro { gap: 35px; }
-    #lc-page .lc-161 { font-size: 8.4rem; }
+    #lc-page .lc-161 { font-size: clamp(7rem, 38vw, 9rem); }
     #lc-page .lc-inspection-grid { grid-template-columns: 1fr; margin-top: 48px; }
-    #lc-page .lc-inspection-item { min-height: 164px; }
-    #lc-page .lc-inspection-item h3 { margin-top: 30px; }
-    #lc-page .lc-care__tabs { grid-template-columns: 1fr; }
-    #lc-page .lc-care-panel { min-height: 420px; padding: 30px 24px; }
-    #lc-page .lc-priority__card { min-height: 430px; }
+    #lc-page .lc-inspection-item { min-height: 0; padding: 24px 22px; }
+    #lc-page .lc-inspection-item h3 { margin-top: 22px; }
+    #lc-page .lc-care__value { padding-left: 22px; }
+    #lc-page .lc-care__experience { gap: 22px; margin-top: 42px; }
+    #lc-page .lc-care__tabs {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(190px, 74vw);
+      grid-template-columns: none;
+      gap: 10px;
+      padding-bottom: 9px;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-snap-type: inline mandatory;
+      scrollbar-width: thin;
+    }
+    #lc-page .lc-care-tab { min-height: 76px; scroll-snap-align: start; }
+    #lc-page .lc-care-panel { min-height: 380px; padding: 30px 22px; }
+    #lc-page .lc-care-panel__metric { font-size: 4.35rem; }
+    #lc-page .lc-priority__card { min-height: 360px; padding: 30px 24px; }
+    #lc-page .lc-priority__item { grid-template-columns: 34px 1fr; gap: 12px; }
+    #lc-page .lc-faq-question { gap: 12px; padding: 21px 0; font-size: .95rem; }
+    #lc-page .lc-faq-answer p { padding: 0 0 22px; font-size: .92rem; }
+    #lc-page .lc-cta h2 { font-size: clamp(2.5rem, 12vw, 3.5rem); }
     #lc-page .lc-cta__actions { grid-template-columns: 1fr; }
-    #lc-page .lc-legal__columns { columns: 1; }
+    #lc-page .lc-legal { padding: 44px 0 56px; font-size: .78rem; line-height: 1.65; }
+    #lc-page .lc-legal__columns { columns: 1; column-gap: 0; }
+    #lc-page .lc-legal address { line-height: 1.7; }
+  }
+
+  @media (max-width: 390px) {
+    #lc-page .lc-shell { width: min(100% - 24px, 1180px); }
+    #lc-page .lc-mark strong { font-size: .9rem; }
+    #lc-page .lc-subnav__links .lc-btn { padding-inline: 10px; }
+    #lc-page .lc-hero { min-height: 640px; background-position: center, 70% center; }
+    #lc-page .lc-hero__content { padding-top: 250px; }
+    #lc-page .lc-btn { min-height: 50px; padding-inline: 17px; font-size: .74rem; }
+    #lc-page .lc-stat strong { font-size: 1.15rem; }
+    #lc-page .lc-stat span { font-size: .53rem; }
   }
 
   @media (prefers-reduced-motion: reduce) {
