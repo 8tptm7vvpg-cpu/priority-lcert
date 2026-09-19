@@ -1,6 +1,35 @@
-<!-- PRIORITY LEXUS VIRGINIA BEACH — L/CERTIFIED LANDING PAGE — VERSION 2 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070708">
+<meta name="description" content="Explore L/Certified by Lexus vehicles, LexusCare benefits and current certified pre-owned inventory at Priority Lexus Virginia Beach.">
+<title>L/Certified by Lexus | Priority Lexus Virginia Beach</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070708'/%3E%3Cpath d='M17 14v36h30' fill='none' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='m39 26 5 5 9-13' fill='none' stroke='%23e51d2a' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<!-- PRIORITY LEXUS VIRGINIA BEACH — L/CERTIFIED LANDING PAGE — VERSION 3 -->
 <!-- Keep lcertified-hero.jpg beside index.html or update --lc-hero-url below. -->
 <style>
+  html {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #070708;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body.lc-standalone {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #ffffff;
+  }
+
   #lc-page {
     --lc-black: #070708;
     --lc-ink: #111214;
@@ -32,6 +61,13 @@
   #lc-page h3,
   #lc-page p { margin: 0; }
   #lc-page img { max-width: 100%; }
+
+  #lc-page .lc-standard__intro > *,
+  #lc-page .lc-care__header > *,
+  #lc-page .lc-care__experience > *,
+  #lc-page .lc-priority__grid > *,
+  #lc-page .lc-faq__layout > *,
+  #lc-page .lc-cta__inner > * { min-width: 0; }
 
   #lc-page .lc-shell {
     width: min(1180px, calc(100% - 48px));
@@ -96,6 +132,7 @@
     letter-spacing: .08em;
     text-transform: uppercase;
     transition: transform .25s ease, background .25s ease, border-color .25s ease;
+    max-width: 100%;
   }
 
   #lc-page .lc-btn:hover { transform: translateY(-2px); }
@@ -113,7 +150,8 @@
 
   /* Local page navigation */
   #lc-page .lc-subnav {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 20;
     color: var(--lc-white);
     background: var(--lc-black);
@@ -391,7 +429,7 @@
   #lc-page .lc-legal h2 { color: var(--lc-ink); font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; }
   #lc-page .lc-legal__columns { columns: 2; column-gap: 44px; margin-top: 22px; }
   #lc-page .lc-legal p { margin: 0 0 12px; break-inside: avoid; }
-  #lc-page .lc-legal address { margin-top: 26px; color: var(--lc-ink); font-style: normal; font-weight: 700; }
+  #lc-page .lc-legal address { margin-top: 26px; color: var(--lc-ink); font-style: normal; font-weight: 700; overflow-wrap: anywhere; }
 
   /* Scroll-reveal motion */
   #lc-page.lc-js .lc-reveal { opacity: 0; transform: translateY(30px); transition: opacity .75s ease, transform .75s ease; }
@@ -506,6 +544,8 @@
     #lc-page .lc-reveal { opacity: 1; transform: none; }
   }
 </style>
+</head>
+<body class="lc-standalone">
 
 <main id="lc-page">
   <!-- Local navigation for this landing page -->
@@ -806,3 +846,5 @@
   }
 })();
 </script>
+</body>
+</html>
